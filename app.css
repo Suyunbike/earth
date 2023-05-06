@@ -1,0 +1,77 @@
+body {
+    background-color: #111;
+    padding-top: 200px;
+}
+
+#earth {
+    background-image: url(https://avatars.mds.yandex.net/i?id=9cf8729b941163a07f06f135da58b7e1315f1aa1-9103996-images-thumbs&n=13);
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+    background-size: 190px;
+    margin: 80px auto;
+    border-radius: 50%;
+    position: relative;
+    animation-name: move, scale, rotate;
+    animation-duration: 4s, 4s, 4s;
+    animation-iteration-count:  infinite, infinite, infinite;
+    animation-timing-function: ease-in-out, linear, linear;
+}
+
+@keyframes move {
+    0% {
+        left: 200px;
+    }
+
+    70% {
+        left: -200px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    32% {
+        transform: scale(0.4);
+        animation-timing-function: ease-in;
+    }
+
+    70% {
+        transform: scale(1);
+        animation-timing-function: ease-in;
+    }
+
+    75% {
+        transform: scale(1.2);
+        animation-timing-function: ease-in-out;
+    }
+
+    86% {
+        transform: scale(2);
+    }
+
+    98% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 100px;
+    }
+}
